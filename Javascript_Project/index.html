@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Crypto Tracker</title>
+    <style>
+        .result-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .result-table th, .result-table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #dee2e6;
+        }
+        .result-table th {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+        .result-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        .positive {
+            color: #28a745;
+        }
+        .negative {
+            color: #dc3545;
+        }
+        .coin-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        .card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h1 class="mb-3">Crypto Tracker</h1>
+                <h4 class="mb-4 text-muted">By Pranjul Tiwari</h4>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <form id="searchForm">
+                            <div class="form-group">
+                                <label for="coinSelect"><b>Select Cryptocurrency</b></label>
+                                <select name="coinType" class="form-control" id="coinSelect">
+                                    <option value="bitcoin">Bitcoin (BTC)</option>
+                                    <option value="ethereum">Ethereum (ETH)</option>
+                                    <option value="tether">Tether (USDT)</option>
+                                    <option value="ripple">XRP (XRP)</option>
+                                    <option value="binance-coin">BNB (BNB)</option>
+                                    <option value="solana">Solana (SOL)</option>
+                                    <option value="dogecoin">Dogecoin (DOGE)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Get Price</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div id="loading" class="mb-3" style="display: none;">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <p>Fetching data...</p>
+                </div>
+                
+                <div id="error" class="alert alert-danger mb-3" style="display: none;"></div>
+                
+                <div id="resultContainer" class="table-responsive"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
