@@ -1,0 +1,15 @@
+HTML_projects:--> It include basic html and css project and can be run with vscode.
+
+JavaScript_project:---> It include javascript,css and html as well also run on vs code.
+
+oops-project:---> It includes oop functionality like super,inheritance,encapsulation.It could be run on intellij,eclipse.
+
+spring-project:--> It has an employee access system currently working on this project. It includes crud processes on 
+                   MVC architecture and use of custom-login, logout functionality with jdbc authentication and 
+		   restrict url based on roles,spring-security,spring-mvc and try to add more functionality
+		    like upload and download a file,validation and exception handling, advanced security features
+		   like jwt token and rest-apis with HATEOS.
+
+
+spring-practice:--> This folder contains basic spring projects related with concepts of spring like autowiring,
+		     dependency Injection,spring jdbc and spring mvc.
